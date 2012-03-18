@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<title>Chercher un personnage sur l'armurerie</title>
+<style type="text/css">
+
+#resultat {
+  width: 900px;
+  height: 700px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  padding: 15px;
+  background-color: #aaaaaa;
+  border: 1px solid black;
+}
+
+.photo {
+  float: left;
+  margin: 10px;
+}
+
+.tabBosses {
+	border: solid 1px black;
+	float: left;
+	width: 200px;
+}
+
+.tabBosses td, th{
+	border: solid 1px black;
+}
+
+</style>
+
+
+
+<script type="text/javascript" src="../mootools/mootools-1.2.1-core-nc.js"></script>
+<script type="text/javascript" src="../mootools/mootools-1.2-more.js"></script>
+
+<script type="text/javascript" src="../js/recherchePersonnage.js"></script>
+
+<script type="text/javascript">
+
+function startup(){
+	var s = new RecherchePersonnage('recherchePersonnage', 'rechercheServeur', 'selection').display();
+}
+
+window.addEvent('domready', function() {
+	$('armoryButton').addEvent('click', startup);
+	$('recherchePersonnage').addEvent('keypress', function(ev) {
+		if(ev.key == 'enter'){
+			startup();
+			ev.stop();
+		}
+	});
+	$('rechercheServeur').addEvent('keypress', function(ev) {
+		if(ev.key == 'enter'){
+			startup();
+			ev.stop();
+		}
+	});
+});
+</script>
+
+</head>
+<body>
+<h1>Chercher des personnages sur l'armurerie</h1>
+
+<div>
+<fieldset>
+<legend>Rechercher le personnage</legend>
+<input type="text" name="personnage" size="30" value="" id="recherchePersonnage" />
+<legend>Sur le serveur</legend>
+<input type="text" name="serveur" size="30" value="" id="rechercheServeur" /><br />
+<input type="button" name="Armory" value="Chercher un personnage" id="armoryButton" />
+</fieldset>
+
+<fieldset id="selection">
+<legend></legend>
+</fieldset>
+
+<div>
+</div>
+</div>
+</body>
+</html>
