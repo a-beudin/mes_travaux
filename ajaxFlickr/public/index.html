@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<title>Chercher des images sur Flickr</title>
+<style type="text/css">
+
+#images {
+  width: 900px;
+  height: 700px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  padding: 15px;
+  background-color: #aaaaaa;
+  border: 1px solid black;
+}
+
+.photo {
+  float: left;
+  margin: 10px;
+}
+
+</style>
+
+
+
+<script type="text/javascript" src="../mootools/mootools-1.2.1-core-nc.js"></script>
+<script type="text/javascript" src="../mootools/mootools-1.2-more.js"></script>
+
+<script type="text/javascript" src="../js/flickrSearch.js"></script>
+
+<script type="text/javascript">
+
+function startup(){
+	var s = new FlickrSearch('flickrSearch', 'selection').display();
+}
+
+window.addEvent('domready', function() {
+	$('flickrButton').addEvent('click', startup);
+	$('flickrSearch').addEvent('keypress', function(ev) {
+		if(ev.key == 'enter'){
+			startup();
+			ev.stop();
+		}
+	});
+});
+
+</script>
+
+</head>
+<body>
+<h1>Chercher des images sur Flickr</h1>
+
+<div>
+<form action="http://jml.perso.info.unicaen.fr/tests/traiteform.php" method="post">
+
+<fieldset>
+<legend>Recherche d'images</legend>
+<input type="text" name="mots" size="100" value="" id="flickrSearch" />
+<input type="button" name="Flickr" value="Chercher des images" id="flickrButton" />
+</fieldset>
+
+<fieldset id="selection">
+<legend>Images sélectionnées</legend>
+</fieldset>
+
+<div>
+<input type="submit" name="envoi" value="Envoyer les données" />
+</div>
+</form>
+</div>
+
+
+</body>
+</html>
