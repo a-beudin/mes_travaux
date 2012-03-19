@@ -7,10 +7,10 @@
  *  @note : attention au / final
  */
 
-define('SERVEUR_URL', 'https://dev-20902167.users.info.unicaen.fr/TPs/tp3/');
+define('SERVEUR_URL', 'https://20902167.users.info.unicaen.fr/');
 
-define('BASE_URL', SERVEUR_URL . '');
-define('BASE_FILE', '/users/20902167/www-dev/TPs/tp3/');
+define('BASE_URL', SERVEUR_URL . 'bookmarks_php_sql/');
+define('BASE_FILE', '/users/20902167/www-prod/bookmarks_php_sql/');
 
 define('LIB_FILE', BASE_FILE . 'modeles/');
 

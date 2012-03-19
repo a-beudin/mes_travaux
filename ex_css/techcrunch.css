@@ -1,0 +1,134 @@
+body {
+	font-family: helvetica;
+	font-size: 14px;
+}
+
+
+a {
+	color: #0A9600;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#entete {
+	height: 140px;
+	margin: auto;
+}
+
+#barreNoire {
+	height: 30px;
+	background-color: #000000;
+}
+
+#barreNoire img {
+	
+}
+
+#menuHaut {
+	width: 640px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 10px;
+	padding-left: 40px;
+}
+
+#menuHaut a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+hr {
+	height: 1px;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+#outerWrapper {
+	width: 968px;
+	padding-left: 40px;
+}
+
+#article {
+	width: 640px;
+	padding-right: 28px;
+	float: left;
+}
+
+#imageArticle {
+	float: left;
+	padding-right: 35px;
+	padding-bottom: 35px;
+}
+
+#texteArticle {
+	line-height: 20px;
+}
+
+.infoPost {
+	width: 640px;
+	font-size: 12px;
+	border-top: solid 1px #000000;
+	padding-bottom: 10px;
+}
+
+.dateAndComments {
+	border-left: solid 1px #000000;
+	width: 33%;
+	text-align: center;
+}
+
+.posteur {
+	text-transform: uppercase;
+	width: 33%;
+	font-size: 14px;
+	border-left: 
+}
+
+.posteur img {
+	float: left;
+	padding-right: 8px;
+}
+
+#menuDroit {
+	width: 300px;
+	float: left;
+}
+
+#menuDroit a {
+	color: #000000;
+}
+
+#menuDroit a:hover {
+	color: #0A9600;
+	text-decoration: none;
+}
+
+#liensMenuDroit {
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+#titreMenuDroit {
+	height: 30px;
+	background: url('imagesCss/titre_bg.png') right no-repeat;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 30px;
+	padding: 0px 0 0 10px;
+	width: 238px;
+	margin-left: 20px;
+}
+
+#liensMenuDroit img {
+	float: left;
+	border: solid 1px #C5C5C5;
+	margin-right: 10px;
+}
